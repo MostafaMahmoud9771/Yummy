@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./Imgs/logo.png" type="image/x-icon" />
+    <title>Yummy</title>
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <!-- ============== -->
+    <!-- Loading Screen -->
+    <!-- ============== -->
+    <section
+      id="loading-screen"
+      class="bg-black vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="fs-rem text-white">
+        <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+      </div>
+    </section>
+
+    <!-- ======= -->
+    <!-- SideBar -->
+    <!-- ======= -->
+    <div id="side-bar" class="position-fixed bg-dark d-flex">
+      <div
+        id="side-bar-content"
+        class="py-4 px-3 vh-100 d-flex flex-column align-items-start"
+      >
+        <ul
+          class="m-0 p-0 list-unstyled text-white fs-6 mb-auto overflow-hidden"
+        >
+          <li id="search" class="py-2 pointer position-relative top100">
+            Search
+          </li>
+          <li id="categories" class="py-2 pointer position-relative top100">
+            Categories
+          </li>
+          <li id="area" class="py-2 pointer position-relative top100">Area</li>
+          <li id="ingredients" class="py-2 pointer position-relative top100">
+            Ingredients
+          </li>
+          <li id="contact" class="py-2 pointer position-relative top100">
+            Contact Us
+          </li>
+        </ul>
+        <div class="fs-6 text-white">
+          <p class="mb-1">
+            <i class="fa-brands fa-facebook pointer"></i>
+            <i class="fa-brands fa-twitter pointer"></i>
+            <i class="fa-solid fa-globe pointer"></i>
+          </p>
+          <p>Copyright Â&copy; 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="text-black bg-white d-flex flex-column justify-content-between py-4 px-2"
+      >
+        <img width="50px" src="./Imgs/logo.png" alt="logo" />
+        <div class="fs-1 text-center">
+          <div id="side-bar-open-btn" class="pointer">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="side-bar-close-btn" class="pointer d-none">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="d-flex flex-column fs-5 text-center">
+          <i class="fa-solid fa-globe pointer mb-1"></i>
+          <i class="fa-solid fa-share-nodes pointer"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== -->
+    <!-- Home -->
+    <!-- ==== -->
+    <section id="home-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="home-container"></div>
+      </div>
+    </section>
+
+    <!-- ====== -->
+    <!-- Search -->
+    <!-- ====== -->
+    <section
+      id="search-section"
+      class="d-none bg-black min-vh-100 overflow-hidden"
+    >
+      <div class="container py-5">
+        <div class="row gy-3 mb-5">
+          <div class="col-md-6">
+            <input
+              id="search-by-name"
+              type="text"
+              class="form-control"
+              placeholder="Search By The Name"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              id="search-by-first-letter"
+              type="text"
+              maxlength="1"
+              class="form-control col-md-6"
+              placeholder="Search By First Letter"
+            />
+          </div>
+        </div>
+        <div class="row gy-4" id="search-container">
+          <div
+            id="search-loading-screen"
+            class="d-none bg-black vh-100 d-flex justify-content-center align-items-center"
+          >
+            <div class="fs-rem text-white">
+              <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== -->
+    <!-- Categories -->
+    <!-- ========== -->
+    <section id="categories-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="categories-container"></div>
+      </div>
+    </section>
+
+    <!-- ================ -->
+    <!-- Single Categorie -->
+    <!-- ================ -->
+    <section id="the-categorie-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="the-categorie-container"></div>
+      </div>
+    </section>
+
+    <!-- ========= -->
+    <!-- Meal Info -->
+    <!-- ========= -->
+    <section id="meal-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="meal-container"></div>
+      </div>
+    </section>
+
+    <!-- ==== -->
+    <!-- Area -->
+    <!-- ==== -->
+    <section id="area-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="area-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== -->
+    <!-- Area Meals -->
+    <!-- ========== -->
+    <section id="area-meals-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="area-meals-container"></div>
+      </div>
+    </section>
+
+    <!-- =========== -->
+    <!-- Ingredients -->
+    <!-- =========== -->
+    <section id="ingredients-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="ingredients-container"></div>
+      </div>
+    </section>
+
+    <!-- ================= -->
+    <!-- Ingredients Meals -->
+    <!-- ================= -->
+    <section id="ingredients-meals-section" class="d-none bg-black min-vh-100">
+      <div class="container py-5">
+        <div class="row gy-4" id="ingredients-meals-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== -->
+    <!-- Contact Us -->
+    <!-- ========== -->
+    <section
+      id="contact-section"
+      class="d-none bg-black min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="container">
+        <div class="w-75 mx-auto row gy-3">
+          <div class="col-md-6">
+            <input
+              id="name"
+              type="text"
+              class="form-control mb-2"
+              placeholder="Enter Your Name"
+            />
+            <p id="invalidName" class="d-none text-danger">
+              Special characters and numbers are not allowed
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="email"
+              type="email"
+              class="form-control mb-2"
+              placeholder="Enter Your Email"
+            />
+            <p id="invalidEmail" class="d-none text-danger">
+              Email is not valid (exemple@yyy.zzz)
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="phoneNumber"
+              type="tel"
+              class="form-control mb-2"
+              placeholder="Enter Your Phone"
+            />
+            <p id="invalidPhoneNumber" class="d-none text-danger">
+              Enter valid phone number
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="age"
+              type="number"
+              class="form-control mb-2"
+              placeholder="Enter Your Age"
+            />
+            <p id="invalidAge" class="d-none text-danger">Enter valid age</p>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="password"
+              type="password"
+              class="form-control mb-2"
+              placeholder="Enter Your Password"
+            />
+            <p id="invalidPassword" class="d-none text-danger">
+              Enter valid password (Minimum eight characters, at least one
+              letter and one number)
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="rePassword"
+              type="password"
+              class="form-control mb-2"
+              placeholder="Repassword"
+            />
+            <p id="invalidRePassword" class="d-none text-danger">
+              Enter valid repassword
+            </p>
+          </div>
+          <div class="text-center">
+            <button id="submitButton" class="disabled btn btn-outline-danger">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./Scripts/all.min.js"></script>
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script src="./Scripts/bootstrap.bundle.min.js"></script>
+    <script src="./Scripts/main.js"></script>
+  </body>
+</html>

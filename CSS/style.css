@@ -1,0 +1,49 @@
+/* ====== */
+/* Shared */
+/* ====== */
+.layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.layer-container {
+  cursor: pointer;
+}
+
+.layer-container:hover .layer {
+  top: 0;
+  bottom: 0;
+}
+
+/* ======= */
+/* SideBar */
+/* ======= */
+#side-bar-content {
+  width: 16rem;
+}
+
+#side-bar {
+  left: -16rem;
+  z-index: 1000;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.top100 {
+  top: 100%;
+}
+
+/* ==== */
+/* Area */
+/* ==== */
+.fs-rem {
+  font-size: 5rem;
+}
